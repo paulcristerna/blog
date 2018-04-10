@@ -1,0 +1,21 @@
+<div class="col-lg-8" ng-controller="postCtrl as post">
+        <h1>{{post.content.title}}</h1>
+
+        <p class="lead">
+            Por: {{post.content.by}}
+        </p>
+
+        <hr>
+
+        <p><span class="glyphicon glyphicon-time"></span> Publicado el {{post.content.date}}</p>
+
+        <hr>
+
+        <img class="img-responsive" ng-src="img/{{post.content.image}}" alt="{{post.content.title}}">
+
+        <hr>
+
+        <p class="lead">{{post.content.desc}}</p>
+        <p>{{post.content.info}}</p>
+    </div>
+</div>

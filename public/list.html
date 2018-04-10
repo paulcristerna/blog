@@ -1,0 +1,28 @@
+<div class="col-md-8" ng-controller="postsCtrl as posts">
+    <h1 class="page-header">
+        Destacado
+        <small>Ultimos posts</small>
+    </h1>
+
+    <div ng-repeat="post in posts.list | filter: buscar">
+        <div class="col-md-8">
+            <h2>
+                <a href="/#/post/{{post._id}}">{{post.title}}</a>
+            </h2>
+        </div>
+        <div class="col-md-4 text-right">
+            <h4>
+                <a class="btn btn-danger" href="/#/delete/{{post._id}}">Eliminar <span class="glyphicon glyphicon-trash"></span></a>
+            </h4>
+        </div>
+        <div class="col-md-12">
+            <p class="lead">Por: {{post.by}}</p>
+            <p><span class="glyphicon glyphicon-time"></span> Publicado el {{post.date}}</p>
+            <a href="/#/post/{{post._id}}"><img class="img-responsive" ng-src="img/{{post.image}}" alt="{{post.title}}"></a>
+            <br />
+            <p>{{post.desc}}.</p>
+            <a class="btn btn-primary" href="/#/post/{{post._id}}">Leer más <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <hr />
+        </div>
+    </div>
+</div>

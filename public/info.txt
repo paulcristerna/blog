@@ -1,0 +1,8 @@
+Frameworks utilizados para este proyecto:
+
+- Startbootstrap
+- MongoDB
+- Express
+- AngularJS
+- Nodejs
+- MongoJS
